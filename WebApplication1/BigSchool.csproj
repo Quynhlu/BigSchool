@@ -25,6 +25,7 @@
     <UseGlobalApplicationHostFile />
     <NuGetPackageImportStamp>
     </NuGetPackageImportStamp>
+    <Use64BitIISExpress />
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -218,6 +219,10 @@
     <Compile Include="Migrations\201904040829556_ChangeUser.Designer.cs">
       <DependentUpon>201904040829556_ChangeUser.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201904090600011_AddNameColumnToApplicationUser.cs" />
+    <Compile Include="Migrations\201904090600011_AddNameColumnToApplicationUser.Designer.cs">
+      <DependentUpon>201904090600011_AddNameColumnToApplicationUser.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\ApplicationDbContext.cs" />
@@ -241,9 +246,6 @@
     <Content Include="Scripts\ai.0.22.9-build00167.min.js" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
-    <Content Include="ApplicationInsights.config">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </Content>
     <None Include="Scripts\jquery-1.10.2.intellisense.js" />
     <Content Include="Scripts\jquery-1.10.2.js" />
     <Content Include="Scripts\jquery-1.10.2.min.js" />
@@ -316,6 +318,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201904040829556_ChangeUser.resx">
       <DependentUpon>201904040829556_ChangeUser.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201904090600011_AddNameColumnToApplicationUser.resx">
+      <DependentUpon>201904090600011_AddNameColumnToApplicationUser.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
