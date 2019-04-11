@@ -23,10 +23,7 @@ namespace WebApplication1.Controllers
                     .Where(c => c.DateTime > DateTime.Now);
                 return View(upcommingCourses);               
         }
-        
-    
-        
-
+                  
         public ActionResult About()
         {
             ViewBag.Message = "Your application description page.";

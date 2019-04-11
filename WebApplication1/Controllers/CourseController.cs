@@ -9,6 +9,7 @@ using System.Web;
 using System.Web.Mvc;
 using WebApplication1.Models;
 using WebApplication1.ViewModels;
+using System.Data.Entity;
 
 namespace WebApplication1.Controllers
 {
@@ -24,7 +25,7 @@ namespace WebApplication1.Controllers
         [Authorize]
         public ActionResult Create()
         {
-            var viewModel = new CourseViewModel
+            var viewModel = new CourseViewModels
             {
                 Categories = _dbContext.Categories.ToList()
             };
@@ -34,8 +35,7 @@ namespace WebApplication1.Controllers
         [Authorize]
         [HttpPost]
         [ValidateAntiForgeryToken]
-
-        public ActionResult Create(CourseViewModel viewModel)
+        public ActionResult Create(CourseViewModels viewModel)
         {
             if (!ModelState.IsValid)
             {

@@ -7,10 +7,11 @@ using WebApplication1.Models;
 
 namespace WebApplication1.ViewModels
 {
-    public class CourseViewModel
+    public class CourseViewModels
     {
         [Required]
         public string Place { get; set; }
+
         [Required]
         [FutureDate]
         public string Date { get; set; }
@@ -18,13 +19,14 @@ namespace WebApplication1.ViewModels
         [Required]
         [ValidTime]
         public string Time { get; set; }
-         public byte Category { get; set; }
+
+        [Required]
+        public byte Category { get; set; }
         public IEnumerable<Category> Categories { get; set; }
 
         public DateTime GetDateTime()
         {
             return DateTime.Parse(string.Format("{0} {1}", Date, Time));
         }
-
     }
 }

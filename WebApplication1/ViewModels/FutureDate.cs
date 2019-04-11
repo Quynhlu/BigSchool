@@ -15,7 +15,7 @@ namespace WebApplication1.ViewModels
             var isValid = DateTime.TryParseExact(Convert.ToString(value),
                 "dd/M/yyyy",
                 CultureInfo.CurrentCulture,
-                System.Globalization.DateTimeStyles.None,
+                DateTimeStyles.None,
                 out dateTime);
             return (isValid && dateTime > DateTime.Now);
         }

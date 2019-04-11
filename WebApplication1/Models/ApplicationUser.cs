@@ -5,6 +5,9 @@ using Microsoft.AspNet.Identity;
 using Microsoft.AspNet.Identity.EntityFramework;
 using BigSchool.Models;
 using System.ComponentModel.DataAnnotations;
+using System.Collections;
+using System.Collections.Generic;
+using System.Collections.ObjectModel;
 
 namespace WebApplication1.Models
 {
@@ -14,6 +17,14 @@ namespace WebApplication1.Models
         [Required]
         [StringLength(255)]
         public string Name { get; set; }
+        public ICollection<Following> Followers { get;  }
+        public ICollection<Following> Followees { get; }
+
+        public ApplicationUser()
+        {
+            Followers = new Collection<Following>();
+            Followees = new Collection<Following>();
+        }
         public async Task<ClaimsIdentity> GenerateUserIdentityAsync(UserManager<ApplicationUser> manager)
         {
             // Note the authenticationType must match the one defined in CookieAuthenticationOptions.AuthenticationType

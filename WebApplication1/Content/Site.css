@@ -1,12 +1,12 @@
 ﻿.navbar-inverse {
     background-color: #d41d50;
-    border-color: #fbf6f6;
+    border-color: gold;
 }
 .navbar-inverse .navbar-nav > li > a {
-    color: white;
+    color: gold;
 }
 .navbar-inverse .navbar-brand {
-    color: white;
+    color: gold;
 }
 body {
     padding-top: 50px;
@@ -43,7 +43,7 @@ textarea {
 .course > li.date {
     text-align:center;
     background-color: firebrick;
-    color: white;
+    color: gold;
     width: 60px;
     border-radius: 8px;
 }
